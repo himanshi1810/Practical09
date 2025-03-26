@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Text Styling</title>
+    <style>
+        #output {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Text Styling in MVC</h2>
+
+    <button onclick="printText()">PRINT TEXT</button>
+    <button onclick="makeBold()">BOLD</button>
+    <button onclick="makeItalic()">ITALIC</button>
+    <button onclick="makeUnderline()">UNDERLINE</button>
+    <button onclick="resetStyle()">RESET</button>
+
+    <p id="output"></p>
+
+    <script>
+        let output = document.getElementById("output");
+        //Prints Simple Text
+        function printText() {
+            output.innerText = "Hello World";
+        }
+        //Makes the text bold
+        function makeBold() {
+            output.style.fontWeight = "bold";
+            output.style.fontStyle = "normal";
+            output.style.textDecoration = "none";
+        }
+        //Makes the text italic
+        function makeItalic() {
+            output.style.fontStyle = "italic";
+            output.style.fontWeight = "normal";
+            output.style.textDecoration = "none";
+        }
+        //Makes the text underline
+        function makeUnderline() {
+            output.style.textDecoration = "underline";
+            output.style.fontWeight = "normal";
+            output.style.fontStyle = "normal";
+        }
+        //Resets the text style
+        function resetStyle() {
+            output.style.fontWeight = "normal";
+            output.style.fontStyle = "normal";
+            output.style.textDecoration = "none";
+        }
+    </script>
+</body>
+</html>
